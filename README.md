@@ -34,6 +34,13 @@ dpkg -i ultron.deb
 ```
 ---
 
+To access `ultron` universally 
+Run the following command after cloning the repo [If you are installing from the releases you don't need to do that.]
+
+```
+mv ultron /usr/bin/
+mv -r files /usr/bin/
+```
 🚀 Usage
 
 1. ✍️ Create a plain text file (e.g., keys.txt) with your API keys:
