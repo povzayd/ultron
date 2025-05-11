@@ -28,7 +28,10 @@ Make sure the script is executable:
 ```
 chmod +x ultron files/*
 ```
-
+Alternatively You can download it from the releases[#releases] option also. Once you download it then run:
+```
+dpkg -i ultron.deb
+```
 ---
 
 🚀 Usage
