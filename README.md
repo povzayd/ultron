@@ -20,32 +20,34 @@ Ultron is a powerful command-line tool for validating API keys and tokens across
 ---
 
 🛠 Installation
-
+```
 git clone https://github.com/povzayd/ultron.git
 cd ultron
-
+```
 Make sure the script is executable:
-
-chmod +x ultron
-
+```
+chmod +x ultron files/*
+```
 
 ---
 
 🚀 Usage
 
 1. ✍️ Create a plain text file (e.g., keys.txt) with your API keys:
-
+```
 api_key_1
 api_key_2
 api_key_3
-
+```
 
 2. ▶️ Run Ultron:
-
-./ultron keys.txt
-
-
-3. 📊 View results to see which keys are valid.
+```
+ultron
+```
+3. Select The Service
+4. Enter the file name
+  `api.txt` 
+5. 📊 View results to see which keys are valid.
 
 
 
