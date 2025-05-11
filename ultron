@@ -1,0 +1,161 @@
+#!/bin/bash
+#Define colors
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No color
+RED='\033[0;31m'
+#Clear the screen
+clear
+#Display intro
+echo -e "${GREEN}=============================================${NC}"
+echo -e "${BLUE}          API Key Validator Tool          ${NC}"
+echo -e "${BLUE}           Developed by povzayd          ${NC}"
+echo -e "${GREEN}=============================================${NC}"
+echo -e ""
+echo -e "${GREEN}Validate your API keys with ease!${NC}"
+echo -e ""
+echo -e "${BLUE}Supported services:${NC}"
+echo -e "  * Telegram Bot 🤖"
+echo -e "  * SonarCloud ☁️"
+echo -e "  * GitHub 👨‍💻"
+echo -e "  * Spotify 🎸"
+echo -e "  * Discord 👾"
+echo -e "  * Slack 💮"
+echo -e "  * Stripe 💰"
+echo -e "  * RazorPay 💸"
+echo -e "  * MailGun 📬🔫"
+#echo -e "  * WakaTime"
+echo -e "  * ...and many more!"
+
+sleep 2.5
+clear
+figlet -f slant "ultron"
+echo "Tested All The Modules!No errors found!"
+sleep 1.5
+#clear
+echo "Looking For Updates!Downloading if any!"
+sleep 1.5
+#clear
+#git pull
+#
+sleep 1.5
+#clear
+read -e -p "Press Enter To Continue....."
+clear
+#
+figlet -f slant "ultron"
+echo -e "${RED}          github.com/povzayd${NC}"
+#Define colors
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No color
+RED='\033[0;31m'
+echo -e "${GREEN}THANK-YOU FOR CONSIDERING ULTRON${NC}"
+echo -e "${RED}TYPE help TO SEE THE FILE FORMAT${NC}"
+echo -e "${BLUE}===================================================${NC}"
+#Display service menu
+echo -e "${GREEN}Select the service to validate API keys for:${NC}"
+echo -e "${BLUE}----------------------------------------------------${NC}"
+    services=(
+        "1) ${RED}Slack-Webhook Checker${NC}"
+        "2) ${RED}GitLab${NC}"
+        "3) ${RED}Mailgun${NC}"
+        "4) ${RED}Telegram Bot${NC}"
+        "5) ${RED}YouTube API Checker${NC}"
+        "6) ${RED}Grafana${NC}"
+        "7) ${RED}RazorPay API Checker${NC}"
+        "8) ${RED}Twilio${NC}"
+        "9) ${RED}AWS Access-Key & Secret${NC}"
+        "10) ${RED}Heroku API Key[Normal Speed]${NC}"
+        "11) ${RED}Shodan API Key${NC}"
+        "12) ${RED}WakaTime${NC}"
+        "13) ${RED}Calendly${NC}"
+        "14) ${RED}IPStack${NC}"
+        "15) ${RED}SonarCloud${NC}"
+        "16) ${RED}GitHub${NC}"
+        "17) ${RED}Stripe API Checker${NC}"
+        "18) ${RED}Spotify${NC}"
+        "19) ${RED}Heroku API Key[Faster then 10]${NC}"
+        "20) ${RED}Discord Webhook Checker${NC}"
+    )
+    for service in "${services[@]}"; do
+        echo -e " ${YELLOW}$service${NC}"
+    done
+    echo -e "${BLUE}----------------------------------------------------${NC}"
+#Main loop
+while true; do
+   # display_menu
+    read -e -p "Enter your choice (1-20), type 'help' for more information, or type 'exit' to quit:" choice
+    case $choice in
+        1) 
+            bash files/Slack-WebHook.sh
+            break ;;
+        2) 
+            bash files/gitlab.sh
+            break ;;
+        3) 
+            bash files/mailgun.sh
+            break ;;
+        4) 
+            bash files/telegram-bot-token.sh
+            break ;;
+        5) 
+            bash files/YouTube-API.sh
+            break ;;
+        6) 
+            bash files/grafana.sh
+            break ;;
+        7) 
+            bash files/razor.sh
+            break ;;
+        8) 
+            bash files/twilio2.4.sh
+            break ;;
+        9) 
+            bash files/aws.sh
+            break ;;
+        10) 
+            bash files/heroku2.sh
+            break ;;
+        11) 
+            bash files/shodan6.sh
+            break ;;
+        12) 
+            bash files/wakatime.sh
+            break ;;
+        13) 
+            bash files/calendly2.sh
+            break ;;
+        14) 
+            bash files/ipstack.sh
+            break ;;
+        15) 
+            bash files/sonarcloud.sh
+            break ;;
+        16) 
+            bash files/github2.sh
+            break ;;
+        17) 
+            bash files/link.sh
+            break ;;
+        18) 
+            bash files/spotify2.sh
+            break ;;
+        19)
+            bash files/heroku3.sh
+            break ;;
+        20)
+            bash files/discord2.sh
+            break ;;
+        help) 
+            bash files/help.sh
+            break ;;
+        exit) 
+            echo -e "${GREEN}Exiting...${NC}"
+            exit 0 ;;
+        *) 
+            echo -e "Invalid choice! Please try again." ;;
+    esac
+done
+
