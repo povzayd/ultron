@@ -27,14 +27,13 @@ while IFS=: read -r CLIENT_KEY CLIENT_SECRET || [ -n "$CLIENT_KEY" ]; do
   if [[ -z "$CLIENT_KEY" || -z "$CLIENT_SECRET" ]]; then
     continue
   fi
-
-  # Trim any whitespace
+#Trim any whitespace
   CLIENT_KEY=$(echo "$CLIENT_KEY" | xargs)
   CLIENT_SECRET=$(echo "$CLIENT_SECRET" | xargs)
 
   echo -n "Checking $CLIENT_KEY: "
 
-  # Make the API call
+#he API call
   RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" -u "$CLIENT_KEY:$CLIENT_SECRET" https://api.razorpay.com/v1/payments)
 
   if [ "$RESPONSE" -eq 200 ]; then
@@ -46,4 +45,4 @@ done < "$INPUT_FILE"
 
 echo "-----------------------------------"
 echo "Validation complete!"
-
+##########fingers crossed hope this works #########
