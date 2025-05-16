@@ -23,27 +23,28 @@ echo "-----------------------------------"
 
 # Process each line in the file
 while IFS=: read -r ACCESS_KEY SECRET_KEY || [ -n "$ACCESS_KEY" ]; do
-  # Skip empty lines or lines without both key and secret
+#Skip empty lines or lines without both key and secret
+
   if [[ -z "$ACCESS_KEY" || -z "$SECRET_KEY" ]]; then
     continue
   fi
 
-  # Trim any whitespace
+#Trim any whitespace
   ACCESS_KEY=$(echo "$ACCESS_KEY" | xargs)
   SECRET_KEY=$(echo "$SECRET_KEY" | xargs)
 
   echo -n "Checking credentials for $ACCESS_KEY: "
 
-  # Temporarily set AWS credentials as environment variables
+#Temporarily set AWS credentials as environment variables
   export AWS_ACCESS_KEY_ID="$ACCESS_KEY"
   export AWS_SECRET_ACCESS_KEY="$SECRET_KEY"
   
-  # Make the API call to validate credentials
+#Make the API call to validate credentials
   RESULT=$(aws sts get-caller-identity 2>&1)
   EXIT_CODE=$?
   
   if [ $EXIT_CODE -eq 0 ]; then
-    # Extract account and user information
+#Extract account and user information
     ACCOUNT=$(echo "$RESULT" | grep "Account" | cut -d'"' -f4)
     ARN=$(echo "$RESULT" | grep "Arn" | cut -d'"' -f4)
     echo "✅ VALID"
@@ -55,7 +56,7 @@ while IFS=: read -r ACCESS_KEY SECRET_KEY || [ -n "$ACCESS_KEY" ]; do
     echo "   Error: $ERROR_MSG"
   fi
   
-  # Unset the environment variables
+#Unset the environment variables
   unset AWS_ACCESS_KEY_ID
   unset AWS_SECRET_ACCESS_KEY
   
