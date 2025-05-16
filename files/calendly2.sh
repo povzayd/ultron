@@ -18,15 +18,14 @@ while IFS= read -r TOKEN; do
         continue
     fi
 
-    # Trim any whitespace
+#Trim any whitespace
     TOKEN=$(echo "$TOKEN" | xargs)
-
-    # Make an API request to validate the token
+#Make an API request to validate the token
     RESPONSE=$(curl -s -X GET \
         -H "Authorization: Bearer $TOKEN" \
         'https://api.calendly.com/users/me')
 
-    # Check if the token is valid
+#Check if the token is valid
     if echo "$RESPONSE" | grep -q "resource"; then
         echo "✅ VALID - $TOKEN"
     else
