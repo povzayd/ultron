@@ -85,7 +85,9 @@ echo -e "${BLUE}----------------------------------------------------${NC}"
     echo -e "${BLUE}----------------------------------------------------${NC}"
 #Main loop
 while true; do
-   # display_menu
+#
+#
+#display menu add moore file later
     read -e -p "Enter your choice (1-20), type 'help' for more information, or type 'exit' to quit:" choice
     case $choice in
         1) 
