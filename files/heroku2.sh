@@ -8,7 +8,8 @@ if [[ ! -f "$KEYS_FILE" ]]; then
 fi
 
 while read -r API_KEY; do
-  # Skip empty lines
+#
+
   [[ -z "$API_KEY" ]] && continue
 
   RESPONSE=$(curl -s -o /dev/null -w "%{http_code}" \
