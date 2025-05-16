@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# 🚀 Prompt for the input file
+#Prompt for the input file
 read -e -p "📄 Enter the path to the file containing Discord webhook URLs: " file
 
-# 📂 Check if file exists
+#Check if file exists
 if [[ ! -f "$file" ]]; then
   echo "❌ File does not exist."
   exit 1
@@ -11,12 +11,12 @@ fi
 
 echo "🔎 Checking webhooks..."
 
-# 🔁 Loop through each URL in the file
+#Loop through each URL in the file
 while IFS= read -r url; do
-  # Skip empty lines
+#Skip empty lines
   [[ -z "$url" ]] && continue
 
-  # 📡 Send a test POST request
+#Senda a test POST request
   status=$(curl -s -o /dev/null -w "%{http_code}" -H "Content-Type: application/json" \
     -X POST -d '{"content":"Hello! This is a Test Message!"}' "$url")
 
