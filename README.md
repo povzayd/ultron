@@ -2,7 +2,7 @@
 [PREVIOUSLY apiscanner]                                                                             
 Ultron is a powerful command-line tool for validating API keys and tokens across various services like Slack, GitLab, AWS, GitHub, Stripe, and more. Just feed it a plain text file with your keys, and let Ultron handle the rest.
 
-This inspiration for this tool was [streaak](https://github.com/streaak)                                                                                                                          
+The inspiration for this tool was [streaak](https://github.com/streaak)                                                                                                                          
 Checkout their work [KeyHacks](https://github.com/streaak/keyhacks)
 ---
 
