@@ -155,4 +155,4 @@ read -ep "Press Enter to return to the main menu..."
 #./mastercaller.sh
 #./mastercaller.sh
 #calling ultron
-ultron
+./ultron
