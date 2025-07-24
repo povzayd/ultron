@@ -89,7 +89,7 @@ echo -e "    HRKU-1e79da9e-8b35-48b9-b21d-727373738"
 echo -e "PLEASE NOTE THAT THE HEROKU CHECKER ON 10th NUMBER IS" 
 echo -e "SLOWER THEN THE ONE ON 19th NUMBER. THE 19th ONE HAS"
 echo -e "BEEN TESTED FOR UPTO AN ACCURACY OF 1 PER 11665"
-echo -e "[It Means I Had 1 valid key placed at end of 11664 keys I didn't get any rate limit though some sources clain that Heroku allows only 4500 requests per Hour" 
+echo -e "[It Means I Had 1 valid key placed at end of 11664 keys I didn't get any rate limit though some sources claim that Heroku allows only 4500 requests per Hour.The approx time taken was around 13 minutes.]" 
 echo -e ""
 
 echo -e "${YELLOW}11) Shodan API Keys:${NC}"
