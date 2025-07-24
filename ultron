@@ -36,7 +36,7 @@ sleep 1.5
 echo "Looking For Updates!Downloading if any!"
 sleep 1.5
 #clear
-#git pull
+git pull
 #
 sleep 1.5
 #clear
@@ -78,6 +78,10 @@ echo -e "${BLUE}----------------------------------------------------${NC}"
         "18) ${RED}Spotify${NC}"
         "19) ${RED}Heroku API Key[Faster then 10]${NC}"
         "20) ${RED}Discord Webhook Checker${NC}"
+        "21) ${RED}SMTP Credentials${NC}"
+        "22) ${RED}OpenAI API-Key${NC}"
+
+
     )
     for service in "${services[@]}"; do
         echo -e " ${YELLOW}$service${NC}"
@@ -88,7 +92,7 @@ while true; do
 #
 #
 #display menu add moore file later
-    read -e -p "Enter your choice (1-20), type 'help' for more information, or type 'exit' to quit:" choice
+    read -e -p "Enter your choice (1-22), type 'help' for more information, or type 'exit' to quit:" choice
     case $choice in
         1) 
             bash files/Slack-WebHook.sh
@@ -149,6 +153,12 @@ while true; do
             break ;;
         20)
             bash files/discord2.sh
+            break ;;
+        21) 
+            bash files/mass-smtp.sh
+            break ;;       
+        22) 
+            bash files/openai.sh
             break ;;
         help) 
             bash files/help.sh
