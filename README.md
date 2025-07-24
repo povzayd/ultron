@@ -83,9 +83,7 @@ ultron
 
 ➕ ...and more coming soon!
 
-***
-Ultron API Key Validator Help
-***
+***Ultron API Key Validator Help***
 
 About the Input File Format
 To validate your API keys using Ultron, prepare a plain text file containing your keys.
@@ -179,10 +177,4 @@ We welcome contributions!
 
 5. 📬 Submit a pull request
 
-
-
-Got an idea? Open an issue to discuss it!
-
-
-
-Would you like me to generate a badge section (e.g., stars, license, etc.) as well?
+>Got an idea? Open an issue to discuss it!
