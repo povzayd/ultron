@@ -28,11 +28,15 @@ cd ultron
 Make sure the script is executable:
 ```
 chmod +x ultron files/*
+
 ```
+<!--
 Alternatively You can download it from the [Releases](https://github.com/povzayd/ultron/releases) option also. Once you download it just unzip it & then run:
 ```
 dpkg -i ultron.deb
 ```
+update later!
+-->
 ---
 
 To access `ultron` universally 
