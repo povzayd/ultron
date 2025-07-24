@@ -137,6 +137,14 @@ echo -e "${YELLOW}19) Discord Webhook URLs:${NC}"
 echo -e "  URLs like:"
 echo -e "    https://discord.com/api/webhooks/123456789012345678/abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 echo -e ""
+echo -e "${YELLOW}11) SMTP Validator:${NC}"
+echo -e "  smtp.example.com:465:user@example.com:pass:ssl:user@example.com, e.g.:"
+echo -e "    smtp.mailgun.org:587:no-reply@randomportal.com:d1a558b9604010bab610616cea908eefc-b20e3d79:tls:no-reply@randomportal.com"
+echo -e ""
+echo -e "${YELLOW}22) OpenAI API Keys:${NC}"
+echo -e "1 API Key Per Line, e.g.:"
+echo -e "   sk-proj--examplekey123testtrynott0val1dat3th157h157h19gissorandomthatidontevenknowwhtyiwroteitasanexampleNearlyallopenaiapikeysare150characterslonganditcontainsAZazand0to9onlynospecialcharacterslolyoucangonow0"
+echo -e ""
 
 echo -e "${GREEN}How to Use:${NC}"
 echo -e "  1) Select the service from the menu."
@@ -155,4 +163,5 @@ read -ep "Press Enter to return to the main menu..."
 #./mastercaller.sh
 #./mastercaller.sh
 #calling ultron
+#updated help.sh rn 9:01 IST 
 ./ultron
